@@ -4,6 +4,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import StackIcon from "tech-stack-icons";
 
 export const navLinks = [
   { id: "Home", icon: <HomeIcon color="primary" /> },
@@ -12,107 +13,103 @@ export const navLinks = [
   { id: "Contact", icon: <PermPhoneMsgIcon color="primary" /> },
 ];
 
+const iconSize = {
+  height: "35px",
+  width: "35px",
+};
+
 export const projects = [
   {
     id: 1,
     title: "DineEase",
-    img: ["/assets/jobit.png", "/assets/jobit.png", "/assets/jobit.png"],
+    img: [
+      "/assets/projects/dine-ease/home-page.png",
+      "/assets/projects/dine-ease/about-page.png",
+      "/assets/projects/dine-ease/profile-page.png",
+      "/assets/projects/dine-ease/restaurant-page.png",
+      "/assets/projects/dine-ease/restaurant-dashboard-page.png",
+      "/assets/projects/dine-ease/restaurant-discovery-page.png",
+      "/assets/projects/dine-ease/favourites-map-page.png",
+    ],
     techStack: [
       {
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <StackIcon name="nextjs2" style={iconSize} />,
         name: "Next.js",
       },
       {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
+        icon: <StackIcon name="reactjs" style={iconSize} />,
+        name: "React.js",
       },
       {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
+        icon: <StackIcon name="materialui" style={iconSize} />,
+        name: "Material-UI",
       },
       {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
+        icon: <StackIcon name="redux" style={iconSize} />,
+        name: "Redux-Toolkit.js",
+      },
+      {
+        icon: <StackIcon name="aws" style={iconSize} />,
+        name: "AWS S3",
+      },
+      {
+        icon: null,
+        name: "Mapbox.js",
+      },
+      {
+        icon: null,
+        name: "Meilisearch",
+      },
+      {
+        icon: null,
+        name: "Chart.js",
+      },
+      {
+        icon: null,
+        name: "Stripe",
       },
     ],
-    description:
-      "lorem ispum dimmit sit amet conestor dkeam jite sei uffer lorem ispum dimmit sit amet conestor dkeam jite sei ufferlorem ispum dimmit sit amet conestor dkeam jite sei uffer",
+    description: "A comprehensive dining platform with the following features.",
+    bullets: [
+      "Detailed restaurant listings with Mapbox integration.",
+      "User critiques and engagement functionalities.",
+      "Shareable personalized restaurant maps for tailored dining experiences.",
+      "Dining plans for organizing meals.",
+    ],
   },
   {
     id: 2,
-    title: "DineEase",
-    img: ["/assets/jobit.png", "/assets/jobit.png", "/assets/jobit.png"],
+    title: "Blog Application",
+    img: [
+      "/assets/projects/blog-app/home-page.png",
+      "/assets/projects/blog-app/posts-page.png",
+      "/assets/projects/blog-app/post-1-content-page.png",
+      "/assets/projects/blog-app/post-2-content-page.png",
+      "/assets/projects/blog-app/contact-page.png",
+    ],
     techStack: [
       {
-        icon: <GitHubIcon fontSize="large" />,
+        icon: <StackIcon name="nextjs2" style={iconSize} />,
         name: "Next.js",
       },
       {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
+        icon: <StackIcon name="reactjs" style={iconSize} />,
+        name: "React.js",
       },
       {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
+        icon: <StackIcon name="mongodb" style={iconSize} />,
+        name: "MongoDB",
       },
       {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
+        icon: <StackIcon name="nodejs" style={iconSize} />,
+        name: "Node.js",
       },
     ],
-    description:
-      "lorem ispum dimmit sit amet conestor dkeam jite sei uffer lorem ispum dimmit sit amet conestor dkeam jite sei ufferlorem ispum dimmit sit amet conestor dkeam jite sei uffer",
-  },
-  {
-    id: 3,
-    title: "DineEase",
-    img: ["/assets/jobit.png", "/assets/jobit.png", "/assets/jobit.png"],
-    techStack: [
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
+    description: "Full-stack application developed with Next.js.",
+    bullets: [
+      "Allows publishing blogs with comments, stored in MongoDB.",
+      "Integration of code snippets using react-markdown and gray matter.",
     ],
-    description:
-      "lorem ispum dimmit sit amet conestor dkeam jite sei uffer lorem ispum dimmit sit amet conestor dkeam jite sei ufferlorem ispum dimmit sit amet conestor dkeam jite sei uffer",
-  },
-  {
-    id: 4,
-    title: "DineEase",
-    img: ["/assets/jobit.png", "/assets/jobit.png", "/assets/jobit.png"],
-    techStack: [
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-      {
-        icon: <GitHubIcon fontSize="large" />,
-        name: "Next.js",
-      },
-    ],
-
-    description:
-      "lorem ispum dimmit sit amet conestor dkeam jite sei uffer lorem ispum dimmit sit amet conestor dkeam jite sei ufferlorem ispum dimmit sit amet conestor dkeam jite sei uffer",
   },
 ];
 
@@ -130,16 +127,16 @@ export const technologies = [
     image: "/assets/tech/javascript.png",
   },
   {
-    name: "TypeScript",
-    image: "/assets/tech/reactjs.png",
-  },
-  {
     name: "React JS",
     image: "/assets/tech/reactjs.png",
   },
   {
-    name: "Redux Toolkit",
-    image: "/assets/tech/redux.png",
+    name: "Next JS",
+    image: "/assets/tech/nextjs.png",
+  },
+  {
+    name: "Express JS",
+    image: "/assets/tech/expressjs.png",
   },
   {
     name: "Node JS",

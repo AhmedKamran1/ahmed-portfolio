@@ -4,7 +4,7 @@ import Link from "next/link";
 
 // Styles
 import * as Styles from "./hero.styles";
-import { Box, Grid, Tooltip, useMediaQuery } from "@mui/material";
+import { Box, Grid, Tooltip } from "@mui/material";
 import {
   FlexContainer,
   GradientText,
@@ -24,7 +24,8 @@ import { motion } from "framer-motion";
 import { textVariant } from "@/utils/motion";
 
 // Components
-import ComputersCanvas from "../canvas/computer";
+import Lottie from "lottie-react";
+import heroAnimation from "../../public/assets/section-animations/hero.json";
 
 const Hero = () => {
   const socialLinks = [
@@ -45,32 +46,36 @@ const Hero = () => {
     },
   ];
 
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
-
   return (
-    <SectionContainer container columnSpacing={!isMobile ? 2 : 0} id="Home">
+    <SectionContainer container id="Home">
+      <Image
+        src={"/assets/herobg.png"}
+        alt="hero-image"
+        fill
+        sizes="100%"
+        style={{ opacity: 0.25, zIndex: -1 }}
+      />
       <Grid item xs={12} md={6} zIndex={1}>
         <FlexContainer gap={3}>
           <FlexContainer sx={{ flexDirection: "column" }}>
             <Styles.RoundCircle />
             <Styles.FadingLine />
           </FlexContainer>
-          <FlexContainer
+          <Styles.HeroContent
             component={motion.div}
             variants={textVariant(3.5)}
             initial="hidden"
             animate="show"
-            sx={{ gap: 2, flexDirection: "column", alignItems: "flex-start" }}
           >
-            <Text variant="bigHeader" color="text.primary" fontWeight={600}>
+            <Text variant="bigHeader" color="text.primary" fontWeight={900}>
               Hi, I'm{" "}
-              <Text variant="bigHeader" color="text.primary" fontWeight={600}>
+              <Text variant="bigHeader" color="text.primary" fontWeight={900}>
                 Ahmed Kamran.
               </Text>
             </Text>
             <Box>
-              <GradientText variant="header" sx={{ fontWeight: 900, mr: 1 }}>
-                Frontend Web Developer;
+              <GradientText variant="header" sx={{ fontWeight: 900 }}>
+                Frontend Web Developer ;
               </GradientText>
               <Text
                 component={motion.span}
@@ -80,15 +85,14 @@ const Hero = () => {
                   repeat: Infinity,
                 }}
                 variant="header"
-                fontWeight={900}
+                fontWeight={500}
               >
                 |
               </Text>
             </Box>
             <Text variant="main" sx={{ display: "block", mt: 1 }}>
-              lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem
-              ipsumlorem ipsumlorem ipsumlorem ipsum
+              An enthusiastic Frontend Developer with a knack for creating
+              beautiful and intuitive user interfaces.
             </Text>
             <FlexContainer sx={{ justifyContent: "flex-start" }}>
               {socialLinks.map((social) => (
@@ -99,7 +103,7 @@ const Hero = () => {
                 >
                   <Link
                     href={social.redirectLink}
-                    target={social.id !== "Email" && "_blank"}
+                    target={social.id !== "Email" ? "_blank" : "_self"}
                   >
                     <Styles.SocialIconButton color="secondary">
                       {social.icon}
@@ -116,21 +120,20 @@ const Hero = () => {
               }
               startIcon={<DescriptionIcon color="secondary" />}
             >
-              <Text variant="body">Download Resume</Text>
+              <Text variant="sub">Download Resume</Text>
             </PrimaryButton>
-          </FlexContainer>
+          </Styles.HeroContent>
         </FlexContainer>
       </Grid>
-      <Grid item xs={12} md={6} zIndex={1} height="50%" mt={-35}>
-        <ComputersCanvas />
+      <Grid item xs={12} md={5} sx={{ display: { xs: "none", md: "block" } }}>
+        {/* <ComputersCanvas /> */}
+        <Styles.ImageContainer>
+          <Lottie
+            style={{ height: "100%", width: "100%" }}
+            animationData={heroAnimation}
+          />
+        </Styles.ImageContainer>
       </Grid>
-      <Image
-        src={"/assets/herobg.png"}
-        alt="hero-image"
-        fill
-        sizes="100%"
-        style={{ opacity: 0.25 }}
-      />
       <Tooltip title="Scroll Down">
         <Styles.MouseShape>
           <Styles.MouseScroll>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export const SectionHeader = styled(Box)(({ theme }) => ({
   position: "sticky",
   textAlign: "center",
-  top: 120,
+  top: 100,
   left: 0,
   [theme.breakpoints.down("md")]: {
     top: 20,

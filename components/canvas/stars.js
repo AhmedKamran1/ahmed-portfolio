@@ -2,7 +2,7 @@ import React, { useState, useRef, Suspense } from "react";
 import { inSphere } from "maath/random";
 
 // Styles
-import { Box } from "@mui/material";
+import * as Styles from "./particles.styles";
 
 // ThreeJS
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -36,14 +36,7 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   return (
-    <Box
-      sx={{
-        height: "100%",
-        width: "100%",
-        position: "absolute",
-        zIndex: -1,
-      }}
-    >
+    <Styles.ParticlesContainer>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />
@@ -51,7 +44,7 @@ const StarsCanvas = () => {
 
         <Preload all />
       </Canvas>
-    </Box>
+    </Styles.ParticlesContainer>
   );
 };
 

@@ -1,12 +1,13 @@
 import { Box, styled } from "@mui/material";
 
 export const ImageContainer = styled(Box)(({ theme }) => ({
-  height: "550px",
+  height: "55vh",
   position: "relative",
-  perspective: "1000px",
   overflow: "hidden",
+  minHeight: "220px",
+  perspective: "1000px",
 
   [theme.breakpoints.down("md")]: {
-    height: "200px",
+    height: "35vh",
   },
 }));

@@ -12,9 +12,10 @@ export const SignatureText = styled(Text)(({ theme, variant }) => ({
   fontFamily: '"Satisfy", cursive',
   fontWeight: 900,
   cursor: "pointer",
+  letterSpacing: theme.spacing(0.25),
 }));
 
-export const GradientText = styled(Text)(({ theme, variant }) => ({
+export const GradientText = styled(SignatureText)(({ theme, variant }) => ({
   background: `linear-gradient(to right, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",

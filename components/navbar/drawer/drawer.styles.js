@@ -16,7 +16,7 @@ export const DrawerWrapper = styled(motion.div)(({ theme }) => ({
 export const HamburgerIcon = styled(IconButton)(({ theme }) => ({
   zIndex: 1000,
   position: "fixed",
-  top: 28,
+  top: 29,
   right: 29,
 }));
 

@@ -1,13 +1,16 @@
 import React, { useRef } from "react";
+import dynamic from "next/dynamic";
 import { useScroll, useSpring } from "framer-motion";
 
 // Styles
 import { Box } from "@mui/material";
-import { ProgressBar, SectionHeader, Text } from "../UI";
+import { ProgressBar, SectionHeader, SignatureText } from "../UI";
 
 // Component
 import PortfolioSection from "./portfolio-section/portfolio-section";
-import Particles from "../canvas/particles";
+const Particles = dynamic(() => import("../canvas/particles"), {
+  loading: () => <p>Loading...</p>,
+});
 
 // Utils
 import { projects } from "@/utils/constants";
@@ -29,9 +32,9 @@ const Portfolio = () => {
     <Box position="relative" ref={ref} id="Portfolio">
       <Particles />
       <SectionHeader>
-        <Text variant="bigHeader" color="text.primary" fontWeight={900}>
+        <SignatureText variant="bigHeader" color="text.primary">
           My Projects
-        </Text>
+        </SignatureText>
         <ProgressBar style={{ scaleX }} />
       </SectionHeader>
       {projects.map((item) => (

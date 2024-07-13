@@ -6,10 +6,12 @@ export const AppBarContainer = styled(AppBar)(({ theme }) => ({
   flexDirection: "row",
   justifyContent: "space-around",
   alignItems: "center",
-  height: "85px",
+  height: "95px",
   backgroundColor: "transparent",
   backdropFilter: "blur(5px)",
   zIndex: 999,
+  boxShadow: "none",
+
   [theme.breakpoints.down("md")]: {
     display: "none",
   },

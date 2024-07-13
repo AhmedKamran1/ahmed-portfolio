@@ -27,13 +27,13 @@ export const LoaderText = styled(Text)(({ theme }) => ({
       "reveal 1500ms cubic-bezier(0.645, 0.045, 0.355, 1) infinite alternate",
     "@keyframes reveal": {
       "0%": { opacity: 0 },
-      "100%": {
-        opacity: 0.5,
-        letterSpacing: "-1em",
-      },
       "50%": {
         opacity: 1,
         letterSpacing: "0em",
+      },
+      "100%": {
+        opacity: 0.5,
+        letterSpacing: "-1em",
       },
     },
   },

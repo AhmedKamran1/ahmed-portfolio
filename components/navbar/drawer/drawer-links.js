@@ -24,7 +24,14 @@ const DrawerLinks = ({ navLinks, handleScroll, handleNavDrawer }) => {
   return (
     <Styles.Link variants={staggerContainer(0.1, 0)}>
       <Box component={motion.div} variants={itemVariants} mb={8} mt={-10}>
-        <SignatureText variant="bigHeader" color="primary">
+        <SignatureText
+          variant="bigHeader"
+          color="primary"
+          onClick={() => {
+            handleScroll("Home");
+            handleNavDrawer();
+          }}
+        >
           {"< Ahmed />"}
         </SignatureText>
       </Box>

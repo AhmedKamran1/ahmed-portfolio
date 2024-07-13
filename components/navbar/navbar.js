@@ -28,7 +28,7 @@ const Navbar = () => {
                 key={item.id}
                 onClick={() => handleScroll(item.id)}
               >
-                <Text variant="body">{item.id}</Text>
+                <Text variant="sub">{item.id}</Text>
               </Styles.LinkContainer>
             ))}
           </Styles.NavContainer>

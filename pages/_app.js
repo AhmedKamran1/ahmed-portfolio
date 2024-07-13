@@ -13,8 +13,13 @@ export default function App({ Component, pageProps }) {
     <ThemeContextProvider>
       <Layout>
         <Head>
-          <title>Ahmed's Portfolio</title>
-          <link rel="icon" type="image/png" href="/assets/tech/reactjs.png" />
+          <title>{"<Ahmed Kamran/>"}</title>
+          <link
+            rel="icon"
+            type="image/png"
+            href="/assets/portfolio-logo.svg"
+            id="title-logo"
+          />
         </Head>
         <Component {...pageProps} />
       </Layout>

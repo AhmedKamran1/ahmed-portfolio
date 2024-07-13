@@ -50,7 +50,7 @@ const TechStackBallCanvas = ({ techImage }) => {
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={false} enablePan={false} />
         <Ball imgUrl={techImage} />
       </Suspense>
 

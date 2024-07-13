@@ -4,7 +4,7 @@ import Slider from "react-slick";
 
 // Styles
 import * as Styles from "./portfolio-section.styles";
-import { Chip, Grid, useMediaQuery } from "@mui/material";
+import { Box, Chip, Grid } from "@mui/material";
 import {
   FlexContainer,
   GradientText,
@@ -24,16 +24,11 @@ import { motion, useInView } from "framer-motion";
 import { slideIn } from "@/utils/motion";
 
 const PortfolioSection = ({ item }) => {
-  const isMobile = useMediaQuery((theme) => theme.breakpoints.down("md"));
   const ref = useRef();
   const isOnScreen = useInView(ref, { margin: "-100px" });
 
   return (
-    <Styles.PortfolioSection
-      container
-      columnSpacing={!isMobile ? 8 : 0}
-      ref={ref}
-    >
+    <Styles.PortfolioSection container columnGap={8} ref={ref}>
       <Grid
         item
         xs={12}
@@ -51,7 +46,7 @@ const PortfolioSection = ({ item }) => {
                 alt={`portfolio-${item.title}`}
                 fill
                 sizes="100%"
-                style={{ objectFit: "cover", borderRadius: "10px" }}
+                style={{ objectFit: "fill", borderRadius: "10px" }}
               />
             </Styles.ImageContainer>
           ))}
@@ -60,28 +55,35 @@ const PortfolioSection = ({ item }) => {
       <Grid
         item
         xs={12}
-        md={6}
+        md={5}
         component={motion.div}
         variants={slideIn("right", "tween", 0.1, 0.5)}
         initial="hidden"
         animate={isOnScreen && "show"}
       >
         <FlexContainer
-          sx={{ justifyContent: "space-between", flexWrap: "wrap" }}
+          sx={{ justifyContent: "space-between", flexWrap: "wrap-reverse" }}
         >
-          <GradientText variant="bigHeader" sx={{ mb: 2, fontWeight: 900 }}>
+          <GradientText variant="bigHeader" sx={{ fontWeight: 900 }}>
             {item.title}
           </GradientText>
-          <FlexContainer gap={3}>
+          <Styles.TechIconsContainer>
             {item.techStack.map((tech, index) => (
               <React.Fragment key={index}>{tech.icon}</React.Fragment>
             ))}
-          </FlexContainer>
+          </Styles.TechIconsContainer>
         </FlexContainer>
-        <Text variant="main" sx={{ display: "block", mb: 3, mt: 2 }}>
+        <Text variant="main" sx={{ display: "block", mb: 2, mt: 2 }}>
           {item.description}
         </Text>
-        <FlexContainer sx={{ justifyContent: "flex-start", gap: 0.5, mb: 3 }}>
+        <Styles.BulletContainer component="ul">
+          {item.bullets.map((bulletPoint, index) => (
+            <Box component="li" key={index}>
+              <Text variant="body">{bulletPoint}</Text>
+            </Box>
+          ))}
+        </Styles.BulletContainer>
+        <Styles.TechChipsContainer>
           {item.techStack.map((tech, index) => (
             <Chip
               key={index}
@@ -90,21 +92,21 @@ const PortfolioSection = ({ item }) => {
               label={tech.name}
             />
           ))}
-        </FlexContainer>
+        </Styles.TechChipsContainer>
         <FlexContainer sx={{ justifyContent: "flex-start", gap: 2 }}>
           <PrimaryButton
             variant="contained"
             color="primary"
             startIcon={<OpenInNewIcon color="secondary" />}
           >
-            <Text variant="body">View Project</Text>
+            <Text variant="sub">View Project</Text>
           </PrimaryButton>
           <PrimaryButton
             variant="contained"
             color="primary"
             startIcon={<GitHubIcon color="secondary" />}
           >
-            <Text variant="body">Github Link</Text>
+            <Text variant="sub">Github Link</Text>
           </PrimaryButton>
         </FlexContainer>
       </Grid>

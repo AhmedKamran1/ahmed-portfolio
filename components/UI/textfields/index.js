@@ -7,7 +7,7 @@ export const InputField = styled(TextField)(({ theme }) => ({
   marginTop: theme.spacing(1.5),
 
   "& .MuiOutlinedInput-root": {
-    color: theme.palette.static.secondary,
+    color: theme.palette.text.primary,
     backgroundColor: "#804dee0f",
   },
 

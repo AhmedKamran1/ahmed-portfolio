@@ -1,5 +1,12 @@
 import { Box, IconButton, styled } from "@mui/material";
 import { motion } from "framer-motion";
+import { FlexContainer } from "../UI";
+
+export const HeroContent = styled(FlexContainer)(({ theme }) => ({
+  gap: theme.spacing(2),
+  flexDirection: "column",
+  alignItems: "flex-start",
+}));
 
 export const FadingLine = styled(Box)(({ theme }) => ({
   height: "400px",
@@ -35,6 +42,10 @@ export const MouseShape = styled(Box)(({ theme }) => ({
   bottom: 50,
   zIndex: 999,
   cursor: "pointer",
+
+  [theme.breakpoints.down("md")]: {
+    display: "none",
+  },
 }));
 
 export const MouseScroll = styled(Box)(({ theme }) => ({
@@ -53,4 +64,15 @@ export const MouseBall = styled(motion.div)(({ theme }) => ({
   margin: "auto",
   marginTop: theme.spacing(0.4),
   backgroundColor: theme.palette.primary.main,
+}));
+
+export const ImageContainer = styled(Box)(({ theme }) => ({
+  height: "55vh",
+  position: "relative",
+  overflow: "hidden",
+  minHeight: "220px",
+
+  [theme.breakpoints.down("md")]: {
+    height: "35vh",
+  },
 }));

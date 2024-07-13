@@ -10,6 +10,7 @@ const NextArrow = (props) => {
     <ArrowForwardIosIcon
       className={className}
       sx={{
+        top: { xs: "60% !important", md: "50% !important" },
         right: "15px !important",
         color: "#804dee !important",
         zIndex: 2,
@@ -24,7 +25,12 @@ const PrevArrow = (props) => {
   return (
     <ArrowBackIosIcon
       className={className}
-      sx={{ left: "15px !important", color: "#804dee !important", zIndex: 2 }}
+      sx={{
+        top: { xs: "60% !important", md: "50% !important" },
+        left: "15px !important",
+        color: "#804dee !important",
+        zIndex: 2,
+      }}
       onClick={onClick}
     />
   );

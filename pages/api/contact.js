@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 const handler = async (req, res) => {
   if (req.method === "POST") {
     let client;
-    const connectionString = `mongodb+srv://${process.env.NEXT_PUBLIC_MONGO_URL}:${process.env.NEXT_PUBLIC_MONGO_PASS}@cluster0.i1lr5rj.mongodb.net/`;
+    const connectionString = `mongodb+srv://${process.env.NEXT_PUBLIC_MONGO_USERNAME}:${process.env.NEXT_PUBLIC_MONGO_PASS}@cluster0.i1lr5rj.mongodb.net/`;
     const { email, name, message } = req.body;
 
     if (
@@ -25,19 +25,19 @@ const handler = async (req, res) => {
     };
 
     const transporter = nodemailer.createTransport({
-      service: "Gmail",
-      host: "smtp.gmail.com",
-      port: 465,
+      service: process.env.NEXT_PUBLIC_EMAIL_SERVICE,
+      host: process.env.NEXT_PUBLIC_EMAIL_HOST,
+      port: process.env.NEXT_PUBLIC_EMAIL_PORT,
       secure: true,
       auth: {
-        user: "ahmed.kamran11122@gmail.com",
+        user: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
         pass: process.env.NEXT_PUBLIC_GMAIL_APP_PASS,
       },
     });
 
     const mailOptions = {
-      from: "ahmed.kamran11122@gmail.com",
-      to: "ahmed.kamran11122@gmail.com",
+      from: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
+      to: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
       subject: "A Message from my Portfolio Website",
       text: `Name: ${newMessage.name} \n
       Email Address: ${newMessage.email} \n
@@ -63,10 +63,10 @@ const handler = async (req, res) => {
     try {
       await db.collection("messages").insertOne(newMessage);
       return res.status(201).json({
-        message: "Successfully stored message!",
+        message: "Sent message successfully!",
       });
     } catch (error) {
-      return res.status(500).json({ message: "Storing message failed!" });
+      return res.status(500).json({ message: "message failed to send!" });
     } finally {
       client.close();
     }

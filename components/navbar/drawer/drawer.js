@@ -5,6 +5,7 @@ import * as Styles from "./drawer.styles";
 
 // Icons
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 
 // Components
 import DrawerLinks from "./drawer-links";
@@ -48,7 +49,11 @@ const NavbarDrawer = ({ navLinks, handleScroll }) => {
         />
       </Styles.LinksContainer>
       <Styles.HamburgerIcon onClick={handleNavDrawer}>
-        <MenuIcon color="primary" sx={{ fontSize: 25 }} />
+        {showDrawer ? (
+          <CloseIcon color="primary" sx={{ fontSize: 25 }} />
+        ) : (
+          <MenuIcon color="primary" sx={{ fontSize: 25 }} />
+        )}
       </Styles.HamburgerIcon>
     </Styles.DrawerWrapper>
   );

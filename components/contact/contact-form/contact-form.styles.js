@@ -5,4 +5,7 @@ export const FormContainer = styled(Box)(({ theme }) => ({
   backdropFilter: "blur(5px)",
   borderRadius: "5px",
   padding: theme.spacing(4),
+  [theme.breakpoints.down("md")]: {
+    padding: theme.spacing(2.5),
+  },
 }));

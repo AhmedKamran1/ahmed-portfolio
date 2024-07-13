@@ -1,15 +1,24 @@
 import React, { useRef } from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 
 // Styles
 import { Box, Grid } from "@mui/material";
-import { ProgressBar, SectionContainer, SectionHeader, Text } from "../UI";
+import {
+  ProgressBar,
+  SectionContainer,
+  SectionHeader,
+  SignatureText,
+} from "../UI";
 
 // Animations
 import { motion, useInView, useScroll, useSpring } from "framer-motion";
 import { fadeIn } from "@/utils/motion";
 
 // Component
-import TechStackBallCanvas from "../canvas/techstack-ball";
+const TechStackBallCanvas = dynamic(() => import("../canvas/techstack-ball"), {
+  loading: () => <p>Loading...</p>,
+});
 
 // Utils
 import { technologies } from "@/utils/constants";
@@ -30,11 +39,18 @@ const TechStack = () => {
   const isOnScreen = useInView(ref, { margin: "-100px" });
 
   return (
-    <Box ref={ref}>
+    <Box ref={ref} position="relative">
+      <Image
+        src={"/assets/herobg.png"}
+        alt="hero-image"
+        fill
+        sizes="100%"
+        style={{ opacity: 0.25 }}
+      />
       <SectionHeader>
-        <Text variant="bigHeader" color="text.primary" fontWeight={900}>
+        <SignatureText variant="bigHeader" color="text.primary">
           Technologies
-        </Text>
+        </SignatureText>
         <ProgressBar style={{ scaleX }} />
       </SectionHeader>
       <SectionContainer
