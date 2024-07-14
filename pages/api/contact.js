@@ -50,12 +50,16 @@ const handler = async (req, res) => {
       ),
     };
 
-    transporter.sendMail(mailOptions, (error, info) => {
-      if (error) {
-        console.error("Error sending email: ", error);
-      } else {
-        console.log("Email sent: ", info.response);
-      }
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.error("Error sending email: ", err);
+          reject(err);
+        } else {
+          console.log("Email sent: ", info.response);
+          resolve(info);
+        }
+      });
     });
 
     try {
