@@ -25,8 +25,8 @@ export const ImageContainer = styled(Box)(({ theme }) => ({
   opacity: 0.95,
   borderRadius: "10px",
 
-  [theme.breakpoints.between("md", "lg")]: {
-    height: "60vh",
+  [theme.breakpoints.between("md", "xl")]: {
+    height: "50vh",
   },
 
   [theme.breakpoints.down("md")]: {

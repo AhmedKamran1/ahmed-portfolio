@@ -16,7 +16,7 @@ export const SignatureText = styled(Text)(({ theme, variant }) => ({
 }));
 
 export const GradientText = styled(SignatureText)(({ theme, variant }) => ({
-  background: `linear-gradient(to right, ${theme.palette.primary.main}, ${theme.palette.secondary.main})`,
+  background: `linear-gradient(to right, ${theme.palette.text.secondary}, ${theme.palette.text.primary})`,
   WebkitTextFillColor: "transparent",
   backgroundClip: "text",
 }));

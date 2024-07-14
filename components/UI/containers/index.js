@@ -7,11 +7,11 @@ export const FlexContainer = styled(Box)({
 });
 
 export const PageContainer = styled(Box)({
-  height: "100vh",
+  height: "100dvh",
 });
 
 export const SecondaryContainer = styled(Grid)({
-  height: "100vh",
+  height: "100dvh",
   minHeight: "650px",
   margin: "auto",
   alignItems: "center",
@@ -26,7 +26,6 @@ export const SectionContainer = styled(SecondaryContainer)(({ theme }) => ({
   position: "relative",
   margin: 0,
   padding: `${theme.spacing(4)} ${theme.spacing(8)}`,
-
   scrollBehavior: "smooth",
   overflow: "hidden",
   [theme.breakpoints.down("md")]: {

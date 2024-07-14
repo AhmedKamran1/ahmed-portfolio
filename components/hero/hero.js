@@ -14,10 +14,7 @@ import {
 } from "../UI";
 
 // Icons
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import DescriptionIcon from "@mui/icons-material/Description";
-import EmailIcon from "@mui/icons-material/Email";
 
 // Animations
 import { motion } from "framer-motion";
@@ -27,29 +24,14 @@ import { textVariant } from "@/utils/motion";
 import Lottie from "lottie-react";
 import heroAnimation from "../../public/assets/section-animations/hero.json";
 
-const Hero = () => {
-  const socialLinks = [
-    {
-      id: "Github",
-      icon: <GitHubIcon fontSize="large" />,
-      redirectLink: "https://github.com/AhmedKamran1",
-    },
-    {
-      id: "LinkedIn",
-      icon: <LinkedInIcon fontSize="large" />,
-      redirectLink: "https://www.linkedin.com/in/ahmed-kamran-1742b4239/",
-    },
-    {
-      id: "Email",
-      icon: <EmailIcon fontSize="large" />,
-      redirectLink: "mailto:ahmed.kamran11122@gmail.com",
-    },
-  ];
+// Utils
+import { socialLinks } from "@/utils/constants";
 
+const Hero = () => {
   return (
     <SectionContainer container id="Home">
       <Image
-        src={"/assets/herobg.png"}
+        src={"/assets/background.png"}
         alt="hero-image"
         fill
         sizes="100%"
@@ -126,7 +108,6 @@ const Hero = () => {
         </FlexContainer>
       </Grid>
       <Grid item xs={12} md={5} sx={{ display: { xs: "none", md: "block" } }}>
-        {/* <ComputersCanvas /> */}
         <Styles.ImageContainer>
           <Lottie
             style={{ height: "100%", width: "100%" }}

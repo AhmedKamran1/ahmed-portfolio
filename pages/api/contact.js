@@ -1,3 +1,4 @@
+import { HTML_TEMPLATE } from "@/utils/email-template";
 import { MongoClient } from "mongodb";
 import nodemailer from "nodemailer";
 
@@ -39,9 +40,14 @@ const handler = async (req, res) => {
       from: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
       to: process.env.NEXT_PUBLIC_EMAIL_ADDRESS,
       subject: "A Message from my Portfolio Website",
-      text: `Name: ${newMessage.name} \n
-      Email Address: ${newMessage.email} \n
-      Message: ${newMessage.message}`,
+      // text: `Name: ${newMessage.name} \n
+      // Email Address: ${newMessage.email} \n
+      // Message: ${newMessage.message}`,
+      html: HTML_TEMPLATE(
+        newMessage.name,
+        newMessage.email,
+        newMessage.message
+      ),
     };
 
     transporter.sendMail(mailOptions, (error, info) => {

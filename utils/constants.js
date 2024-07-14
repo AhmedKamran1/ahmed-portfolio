@@ -4,6 +4,8 @@ import InfoIcon from "@mui/icons-material/Info";
 import ListAltIcon from "@mui/icons-material/ListAlt";
 import PermPhoneMsgIcon from "@mui/icons-material/PermPhoneMsg";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import EmailIcon from "@mui/icons-material/Email";
 import StackIcon from "tech-stack-icons";
 
 export const navLinks = [
@@ -11,6 +13,24 @@ export const navLinks = [
   { id: "About", icon: <InfoIcon color="primary" /> },
   { id: "Portfolio", icon: <ListAltIcon color="primary" /> },
   { id: "Contact", icon: <PermPhoneMsgIcon color="primary" /> },
+];
+
+export const socialLinks = [
+  {
+    id: "Github",
+    icon: <GitHubIcon fontSize="large" />,
+    redirectLink: "https://github.com/AhmedKamran1",
+  },
+  {
+    id: "LinkedIn",
+    icon: <LinkedInIcon fontSize="large" />,
+    redirectLink: "https://www.linkedin.com/in/ahmed-kamran-1742b4239/",
+  },
+  {
+    id: "Email",
+    icon: <EmailIcon fontSize="large" />,
+    redirectLink: "mailto:ahmed.kamran11122@gmail.com",
+  },
 ];
 
 const iconSize = {
@@ -76,6 +96,11 @@ export const projects = [
       "Shareable personalized restaurant maps for tailored dining experiences.",
       "Dining plans for organizing meals.",
     ],
+    url: {
+      githubLink: "https://github.com/orgs/FYP-DineEase/repositories",
+      viewLink:
+        "https://drive.google.com/file/d/1FuwX-qkqPvrICNHPeQFHXFliH23f1bNQ/view?usp=sharing",
+    },
   },
   {
     id: 2,
@@ -110,44 +135,48 @@ export const projects = [
       "Allows publishing blogs with comments, stored in MongoDB.",
       "Integration of code snippets using react-markdown and gray matter.",
     ],
+    url: {
+      githubLink: "https://github.com/AhmedKamran1/ahmed-blog-app",
+      viewLink: "https://ahmed-blog-app.vercel.app/",
+    },
   },
 ];
 
 export const technologies = [
   {
     name: "HTML 5",
-    image: "/assets/tech/html.png",
+    image: "/assets/section-animations/tech-stack/html.png",
   },
   {
     name: "CSS 3",
-    image: "/assets/tech/css.png",
+    image: "/assets/section-animations/tech-stack/css.png",
   },
   {
     name: "JavaScript",
-    image: "/assets/tech/javascript.png",
+    image: "/assets/section-animations/tech-stack/javascript.png",
   },
   {
     name: "React JS",
-    image: "/assets/tech/reactjs.png",
+    image: "/assets/section-animations/tech-stack/reactjs.png",
   },
   {
     name: "Next JS",
-    image: "/assets/tech/nextjs.png",
+    image: "/assets/section-animations/tech-stack/nextjs.png",
   },
   {
     name: "Express JS",
-    image: "/assets/tech/expressjs.png",
+    image: "/assets/section-animations/tech-stack/expressjs.png",
   },
   {
     name: "Node JS",
-    image: "/assets/tech/nodejs.png",
+    image: "/assets/section-animations/tech-stack/nodejs.png",
   },
   {
     name: "MongoDB",
-    image: "/assets/tech/mongodb.png",
+    image: "/assets/section-animations/tech-stack/mongodb.png",
   },
   {
     name: "git",
-    image: "/assets/tech/git.png",
+    image: "/assets/section-animations/tech-stack/git.png",
   },
 ];

@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import Slider from "react-slick";
 
@@ -94,20 +95,24 @@ const PortfolioSection = ({ item }) => {
           ))}
         </Styles.TechChipsContainer>
         <FlexContainer sx={{ justifyContent: "flex-start", gap: 2 }}>
-          <PrimaryButton
-            variant="contained"
-            color="primary"
-            startIcon={<OpenInNewIcon color="secondary" />}
-          >
-            <Text variant="sub">View Project</Text>
-          </PrimaryButton>
-          <PrimaryButton
-            variant="contained"
-            color="primary"
-            startIcon={<GitHubIcon color="secondary" />}
-          >
-            <Text variant="sub">Github Link</Text>
-          </PrimaryButton>
+          <Link href={item.url.viewLink} target="_blank">
+            <PrimaryButton
+              variant="contained"
+              color="primary"
+              startIcon={<OpenInNewIcon color="secondary" />}
+            >
+              <Text variant="sub">View Project</Text>
+            </PrimaryButton>
+          </Link>
+          <Link href={item.url.githubLink} target="_blank">
+            <PrimaryButton
+              variant="contained"
+              color="primary"
+              startIcon={<GitHubIcon color="secondary" />}
+            >
+              <Text variant="sub">Github Link</Text>
+            </PrimaryButton>
+          </Link>
         </FlexContainer>
       </Grid>
     </Styles.PortfolioSection>

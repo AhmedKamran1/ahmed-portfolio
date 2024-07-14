@@ -19,7 +19,7 @@ const NavbarDrawer = ({ navLinks, handleScroll }) => {
 
   const variants = {
     show: {
-      clipPath: "circle(100vh at calc(100% - 50px) 50px)",
+      clipPath: "circle(100dvh at calc(100% - 50px) 50px)",
       transition: {
         type: "tween",
         stiffness: 120,

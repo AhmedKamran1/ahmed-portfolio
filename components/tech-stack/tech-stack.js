@@ -41,7 +41,7 @@ const TechStack = () => {
   return (
     <Box ref={ref} position="relative">
       <Image
-        src={"/assets/herobg.png"}
+        src={"/assets/background.png"}
         alt="hero-image"
         fill
         sizes="100%"

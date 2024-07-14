@@ -20,7 +20,7 @@ export const LoaderContainer = styled(motion.div)(({ theme }) => ({
 export const LoaderText = styled(Text)(({ theme }) => ({
   display: "inline-flex",
   fontWeight: 900,
-  "&:nth-child(2) ": {
+  "&:nth-of-type(2) ": {
     letterSpacing: "-1em",
     overflow: "hidden",
     animation:
@@ -40,11 +40,12 @@ export const LoaderText = styled(Text)(({ theme }) => ({
 }));
 
 export const BarContainer = styled(FlexContainer)(({ theme }) => ({
+  marginTop: theme.spacing(1),
   gap: 10,
   "& > *": {
     backgroundColor: theme.palette.secondary.main,
     width: "15px",
-    height: "25px",
+    height: "20px",
     borderRadius: "4px",
   },
 }));

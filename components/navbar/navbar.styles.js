@@ -26,7 +26,7 @@ export const LinkContainer = styled(Button)(({ theme }) => ({
 
   "&:hover": {
     backgroundColor: theme.palette.primary.main,
-    color: theme.palette.static.primary,
+    color: theme.palette.text.primary,
   },
 }));
 

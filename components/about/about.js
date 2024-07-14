@@ -44,7 +44,7 @@ const About = () => {
   return (
     <SectionContainer container ref={ref} id="About">
       <Image
-        src={"/assets/herobg.png"}
+        src={"/assets/background.png"}
         alt="hero-image"
         fill
         sizes="100%"

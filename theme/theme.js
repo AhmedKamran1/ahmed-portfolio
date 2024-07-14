@@ -4,21 +4,12 @@ const theme = (mode) => {
   };
 
   const secondaryPalette = {
-    main: "#ffffff",
-  };
-
-  const errorPalette = {
-    main: "#ff7675",
-  };
-
-  const progressPalette = {
-    main: "#2E6BF6",
+    main: "#FFFFFF",
   };
 
   const staticColorPalette = {
-    primary: "#fafafa",
-    secondary: "#333333",
-    ternary: "rgba(180, 180, 180)",
+    primary: "#FFFFFF",
+    secondary: "#804dee",
   };
 
   return {
@@ -36,31 +27,12 @@ const theme = (mode) => {
       fontFamily: "inherit",
     },
     palette: {
-      mode,
-      ...(mode === "light"
-        ? {
-            primary: primaryPalette,
-            secondary: secondaryPalette,
-            text: {
-              primary: staticColorPalette.primary,
-              secondary: staticColorPalette.secondary,
-              ternary: staticColorPalette.ternary,
-            },
-            static: staticColorPalette,
-            error: errorPalette,
-            progressbar: progressPalette,
-          }
-        : {
-            primary: primaryPalette,
-            secondary: secondaryPalette,
-            text: {
-              primary: staticColorPalette.primary,
-              secondary: staticColorPalette.secondary,
-            },
-            static: staticColorPalette,
-            error: errorPalette,
-            progressbar: progressPalette,
-          }),
+      primary: primaryPalette,
+      secondary: secondaryPalette,
+      text: {
+        primary: staticColorPalette.primary,
+        secondary: staticColorPalette.secondary,
+      },
     },
   };
 };
