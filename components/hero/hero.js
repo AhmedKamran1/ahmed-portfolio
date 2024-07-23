@@ -57,7 +57,7 @@ const Hero = () => {
             </Text>
             <Box>
               <GradientText variant="header" sx={{ fontWeight: 900 }}>
-                Frontend Web Developer ;
+                Fullstack Web Developer ;
               </GradientText>
               <Text
                 component={motion.span}
@@ -73,8 +73,8 @@ const Hero = () => {
               </Text>
             </Box>
             <Text variant="main" sx={{ display: "block", mt: 1 }}>
-              An enthusiastic Frontend Developer with a knack for creating
-              beautiful and intuitive user interfaces.
+              An enthusiastic Fullstack Developer with a knack for creating
+              beautiful and robust web applications.
             </Text>
             <FlexContainer sx={{ justifyContent: "flex-start" }}>
               {socialLinks.map((social) => (
@@ -94,16 +94,20 @@ const Hero = () => {
                 </Tooltip>
               ))}
             </FlexContainer>
-            <PrimaryButton
-              variant="contained"
-              color="primary"
+            <Link
               href={
-                "https://drive.google.com/uc?id=1-y1Z4zl-7vDjLLA999ROEP_k9FO21LWi&export=download"
+                "https://drive.google.com/file/d/18W6xv4nsO8u_Jd6ATX8xs8FRFyvQF6SH/view?usp=sharing"
               }
-              startIcon={<DescriptionIcon color="secondary" />}
+              target="_blank"
             >
-              <Text variant="sub">Download Resume</Text>
-            </PrimaryButton>
+              <PrimaryButton
+                variant="contained"
+                color="primary"
+                startIcon={<DescriptionIcon color="secondary" />}
+              >
+                <Text variant="sub">View Resume</Text>
+              </PrimaryButton>
+            </Link>
           </Styles.HeroContent>
         </FlexContainer>
       </Grid>

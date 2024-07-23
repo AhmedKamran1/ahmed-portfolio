@@ -79,7 +79,7 @@ const About = () => {
           Getting Personal: A Glimpse into 'Who I Am'
         </GradientText>
         <Text variant="main" sx={{ display: "block", mt: 2 }}>
-          Hello! I'm a passionate Frontend Web Developer with a strong expertise
+          Hello! I am a passionate Fullstack Web Developer with a strong expertise
           in React.js and Next.js, complemented by Material UI for sleek and
           responsive designs. Over the past few years, I've honed my skills
           through a blend of formal education and hands-on projects, creating

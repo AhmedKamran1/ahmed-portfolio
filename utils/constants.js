@@ -24,7 +24,7 @@ export const socialLinks = [
   {
     id: "LinkedIn",
     icon: <LinkedInIcon fontSize="large" />,
-    redirectLink: "https://www.linkedin.com/in/ahmed-kamran-1742b4239/",
+    redirectLink: "https://www.linkedin.com/in/AhmedKamran1/",
   },
   {
     id: "Email",
@@ -144,18 +144,6 @@ export const projects = [
 
 export const technologies = [
   {
-    name: "HTML 5",
-    image: "/assets/section-animations/tech-stack/html.png",
-  },
-  {
-    name: "CSS 3",
-    image: "/assets/section-animations/tech-stack/css.png",
-  },
-  {
-    name: "JavaScript",
-    image: "/assets/section-animations/tech-stack/javascript.png",
-  },
-  {
     name: "React JS",
     image: "/assets/section-animations/tech-stack/reactjs.png",
   },
@@ -178,5 +166,17 @@ export const technologies = [
   {
     name: "git",
     image: "/assets/section-animations/tech-stack/git.png",
+  },
+  {
+    name: "HTML 5",
+    image: "/assets/section-animations/tech-stack/html.png",
+  },
+  {
+    name: "CSS 3",
+    image: "/assets/section-animations/tech-stack/css.png",
+  },
+  {
+    name: "JavaScript",
+    image: "/assets/section-animations/tech-stack/javascript.png",
   },
 ];
