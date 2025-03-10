@@ -104,6 +104,56 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Falcon Sports Complex",
+    img: [
+      "/assets/projects/falcon-sports-complex/Sports-Complex-1.png",
+      "/assets/projects/falcon-sports-complex/Sports-Complex-2.png",
+      "/assets/projects/falcon-sports-complex/Sports-Complex-3.png",
+      "/assets/projects/falcon-sports-complex/Sports-Complex-4.png",
+      "/assets/projects/falcon-sports-complex/Sports-Complex-5.png",
+      "/assets/projects/falcon-sports-complex/Sports-Complex-6.png",
+      "/assets/projects/falcon-sports-complex/Sports-Complex-7.png",
+    ],
+    techStack: [
+      {
+        icon: <StackIcon name="nextjs2" style={iconSize} />,
+        name: "Next.js",
+      },
+      {
+        icon: <StackIcon name="reactjs" style={iconSize} />,
+        name: "React.js",
+      },
+      {
+        icon: <StackIcon name="mongodb" style={iconSize} />,
+        name: "MongoDB",
+      },
+      {
+        icon: <StackIcon name="nodejs" style={iconSize} />,
+        name: "Node.js",
+      },
+      {
+        icon: <StackIcon name="materialui" style={iconSize} />,
+        name: "Material-UI",
+      },
+      {
+        icon: <StackIcon name="framer" style={iconSize} />,
+        name: "Framer Motion",
+      },
+    ],
+    description:
+      "Falcon Sports Complex is a state-of-the-art facility offering diverse amenities.",
+    bullets: [
+      "View upcoming community events with details and scheduling information.",
+      "Users can view membership options and book facilities online.",
+      "Detailed profiles of trainer and available training programs.",
+      "Contact details and an embedded map for easy navigation to the complex.",
+    ],
+    url: {
+      viewLink: "https://www.falconsportscomplex.com/",
+    },
+  },
+  {
+    id: 3,
     title: "Blog Application",
     img: [
       "/assets/projects/blog-app/home-page.png",

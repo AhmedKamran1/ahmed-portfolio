@@ -96,7 +96,7 @@ const Hero = () => {
             </FlexContainer>
             <Link
               href={
-                "https://drive.google.com/file/d/18W6xv4nsO8u_Jd6ATX8xs8FRFyvQF6SH/view?usp=sharing"
+                "https://drive.google.com/file/d/1uc8HUFLJCtYwRD-abjLUFY3wjhS3OSSQ/view?usp=sharing"
               }
               target="_blank"
             >

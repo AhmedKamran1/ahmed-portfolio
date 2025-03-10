@@ -104,15 +104,17 @@ const PortfolioSection = ({ item }) => {
               <Text variant="sub">View Project</Text>
             </PrimaryButton>
           </Link>
-          <Link href={item.url.githubLink} target="_blank">
-            <PrimaryButton
-              variant="contained"
-              color="primary"
-              startIcon={<GitHubIcon color="secondary" />}
-            >
-              <Text variant="sub">Github Link</Text>
-            </PrimaryButton>
-          </Link>
+          {item?.url?.githubLink && (
+            <Link href={item.url.githubLink} target="_blank">
+              <PrimaryButton
+                variant="contained"
+                color="primary"
+                startIcon={<GitHubIcon color="secondary" />}
+              >
+                <Text variant="sub">Github Link</Text>
+              </PrimaryButton>
+            </Link>
+          )}
         </FlexContainer>
       </Grid>
     </Styles.PortfolioSection>
