@@ -8,7 +8,7 @@ export const SectionHeader = styled(Box)(({ theme }) => ({
   left: 0,
 
   [theme.breakpoints.down("md")]: {
-    top: 20,
+    top: 10,
   },
 }));
 

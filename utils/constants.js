@@ -144,9 +144,8 @@ export const projects = [
       "Falcon Sports Complex is a state-of-the-art facility offering diverse amenities.",
     bullets: [
       "View upcoming community events with details and scheduling information.",
-      "Users can view membership options and book facilities online.",
+      "Users can view membership options and register online.",
       "Detailed profiles of trainer and available training programs.",
-      "Contact details and an embedded map for easy navigation to the complex.",
     ],
     url: {
       viewLink: "https://www.falconsportscomplex.com/",

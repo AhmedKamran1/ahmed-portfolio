@@ -65,7 +65,7 @@ const PortfolioSection = ({ item }) => {
         <FlexContainer
           sx={{ justifyContent: "space-between", flexWrap: "wrap-reverse" }}
         >
-          <GradientText variant="bigHeader" sx={{ fontWeight: 900 }}>
+          <GradientText variant="header" sx={{ fontWeight: 900 }}>
             {item.title}
           </GradientText>
           <Styles.TechIconsContainer>
@@ -74,7 +74,7 @@ const PortfolioSection = ({ item }) => {
             ))}
           </Styles.TechIconsContainer>
         </FlexContainer>
-        <Text variant="main" sx={{ display: "block", mb: 2, mt: 2 }}>
+        <Text variant="body" sx={{ display: "block", mb: 2, mt: 2 }}>
           {item.description}
         </Text>
         <Styles.BulletContainer component="ul">
